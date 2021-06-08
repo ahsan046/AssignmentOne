@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity
     public void NewActivity(View view)
     {
         String character=((Button)view).getText().toString();
+        mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+        mediaPlayer.start();
         Intent intent=new Intent(this,Alphabets.class);
         intent.putExtra("character",character);
         startActivity(intent);

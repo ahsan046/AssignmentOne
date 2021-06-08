@@ -3,17 +3,21 @@ package com.example.assignmentone;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
-public class Alphabets extends AppCompatActivity {
-
+public class Alphabets extends AppCompatActivity
+{
+    ImageView imageView;
+    MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabets);
-        ImageView imageView=findViewById(R.id.image);
+        imageView=findViewById(R.id.image);
         Intent intent=getIntent();
         String alpha=intent.getStringExtra("character");
         switch(alpha)
@@ -97,5 +101,98 @@ public class Alphabets extends AppCompatActivity {
                 imageView.setImageResource(R.drawable.z);
 
         }
+    }
+
+    public void voice(View view)
+    {
+        ImageView imageView=findViewById(R.id.image);
+        Intent intent=getIntent();
+        String alpha=intent.getStringExtra("character");
+        switch(alpha)
+        {
+            case "A":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "B":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "C":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "D":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "E":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "F":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "G":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "H":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "I":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "J":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "K":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "L":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "M":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "N":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "O":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "P":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "Q":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "R":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "S":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "T":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "U":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "V":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "W":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "X":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "Y":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+                break;
+            case "Z":
+                mediaPlayer=MediaPlayer.create(this,R.raw.sound);
+        }
+        mediaPlayer.start();
+    }
+
+    public void Rotation(View view)
+    {
+        imageView.animate().rotation(360).setDuration(2000);
     }
 }
